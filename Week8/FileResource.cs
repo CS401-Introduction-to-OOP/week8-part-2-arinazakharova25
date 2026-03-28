@@ -8,28 +8,14 @@ public class FileResource : Resource, IDisposable
 
     public override void Open()
     {
-        if (IsOpen)
-        {
-            IsOpen = true;
-            Console.WriteLine($"File {Name} opened.");
-        }
-        else
-        {
-            Console.WriteLine($"File {Name} already open.");
-        }
+        IsOpen = true;
+        Console.WriteLine($"File {Name} opened.");
     }
 
     public override void Close()
     {
-        if (IsOpen)
-        {
-            IsOpen = false;
-            Console.WriteLine($"File {Name} closed.");
-        }
-        else
-        {
-            Console.WriteLine($"File {Name} already closed.");
-        }
+        IsOpen = false;
+        Console.WriteLine($"File {Name} closed.");
     }
 
     public void Dispose()

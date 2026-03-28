@@ -8,28 +8,14 @@ public class NetworkResource : Resource, IDisposable
 
     public override void Open()
     {
-        if (IsOpen)
-        {
-            IsOpen = true;
-            Console.WriteLine($"Network {Name} opened.");
-        }
-        else
-        {
-            Console.WriteLine($"Network {Name} already open.");
-        }
+        IsOpen = true;
+        Console.WriteLine($"Network {Name} opened.");
     }
 
     public override void Close()
     {
-        if (IsOpen)
-        {
-            IsOpen = false;
-            Console.WriteLine($"Network {Name} closed.");
-        }
-        else
-        {
-            Console.WriteLine($"Network {Name} already closed.");
-        }
+        IsOpen = false;
+        Console.WriteLine($"Network {Name} closed.");
     }
 
     public void Dispose()
